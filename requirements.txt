@@ -1,0 +1,10 @@
+# Observed Windows/Python3.11 runtime; clean installation is untested.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.12.0+cu130
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+rdkit==2026.9.1
+fcd-torch==1.0.7
+transformers==4.44.2
+tokenizers==0.19.1

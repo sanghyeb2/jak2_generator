@@ -1,0 +1,47 @@
+{
+  "adopted": true,
+  "reported_on": "2026-11-14",
+  "score_source": "user-provided Kaggle screenshots; not independently queried",
+  "fullprior": {
+    "public_score": 59.59829,
+    "csv": "제출파일/fullprior_submission.csv",
+    "sha256": "331af1f95b6fa7b26857307aa6b22337c5ce55b1fd64bfa8ef63c6d81cfe89a0",
+    "best_step": 300
+  },
+  "neural": {
+    "public_score": 60.52285,
+    "csv": "제출파일/neural_submission.csv",
+    "sha256": "23f6608f7952b496cbc3ddfd9064940e6e9e92e69deea0feb78d5c28ddce8268",
+    "best_step": 75,
+    "local_proxy": {
+      "score_proxy": 89.39765895785482,
+      "fcd_512": 0.22375849744167198,
+      "otd_sinkhorn_proxy": 2.326556146144867,
+      "ot_column_L1_residual": 5.8353180065751076e-08,
+      "novelty": 1.0,
+      "diversity_exact": 0.8385842518855995,
+      "reference_diversity": 0.8401071655496448,
+      "replacements": 794,
+      "selected_by_source": {
+        "gp": 569,
+        "gru": 462,
+        "molgpt": 386,
+        "transfer": 331,
+        "reinvent": 252
+      }
+    }
+  },
+  "raw_candidates": 50000,
+  "unique_candidates": 39167,
+  "training_rows": 6029,
+  "observed_original_run_records": {
+    "fullprior_csv_sha256": "331af1f95b6fa7b26857307aa6b22337c5ce55b1fd64bfa8ef63c6d81cfe89a0",
+    "neural_csv_sha256": "23f6608f7952b496cbc3ddfd9064940e6e9e92e69deea0feb78d5c28ddce8268",
+    "official_validation": "PASS",
+    "saved_model_replay": "PASS",
+    "public_scores": null,
+    "independent_full_training_repeat": "not performed"
+  },
+  "packaged_code_end_to_end_verification": "not performed",
+  "model_retraining_this_task": false
+}

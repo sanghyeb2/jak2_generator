@@ -1,0 +1,33 @@
+{
+  "generator_source": "original project fixed model modules",
+  "generation_loop_source": "experiments/unified_seeds_123_124_125_20261112/main.py",
+  "training_hpo_repeated": false,
+  "paths_changed_to_local": true,
+  "source_sha256": {
+    "common.py": "78efe229a89842bba0175306eaf8d19c34d9294e9f9f6854f7a2fb306974e5b2",
+    "export_github.py": "f0784cd085ac18159e4ae31b14a5bd2121d822f816da6736c64590e2b4bf7a73",
+    "generators/common.py": "63353abe72c7e9d7a14d3a88a881eaf9c58de99bedbcb73b27f5cd3a3ed9b1c0",
+    "generators/generate.py": "a9cf85728d604473ce40beb92f02f31f0baab883cb631fa9ec85a954b40fe3d5",
+    "generators/generation_utils.py": "2da55f2d35edc81215abaafbe79af6b48079570e168c7607a434791e12abb81a",
+    "generators/gp.py": "adf4270f3eb0102c0c27b816e405c175964443c8c10420b63ac4c949da163e0b",
+    "generators/gru.py": "9beb1285817faae46c56d96f4dbd4e6373e69c3325fedcdb31b0952302b6626d",
+    "generators/molgpt.py": "267853e112dd76620525d3412a7ef773538d44d74a55cc56bdd332233f21ecbd",
+    "generators/reinvent.py": "59868332fe0f96d607007be2e2caf4b82fc10972fdeaa3e2789984b115a07ffe",
+    "generators/transfer.py": "736a1f7bd6403cdf36bed9091ffc44ed6660ab746ec28eb91ef2ab985cc86504",
+    "main.py": "dcf5fcff17d72eda7d206145b54885f7b91de0b25be6616f6395807a63713bcd",
+    "neural_stage.py": "95656108b991deab707bcff7bacc8d4eccdc716cc19805b37eb8edac996035e6",
+    "pipeline_utils.py": "d16075b311840d90dc401dab5a860ab2d13fa5eac72547bfc154ed41bc100a18",
+    "prepare_assets.py": "808ca85e5fd2520bed9d46882ccd12bfc281a159c2eeb4b15fe7419b251e3858",
+    "selection_pipeline.py": "a44c70763d7fe52a09f94d51825864954335165c26e935c1b2fb490df54fa707",
+    "selector.py": "7d9e6891ba51037e2d61546642ec4c0f20526a9b9a9aa128b7a6293fa20ee5f9",
+    "test_entrypoint.py": "d39996946886da5a411e3af2dfa0381c00a5307da3f0ee9ed7d9a3d2b3da3b7f"
+  },
+  "observed_archive": "local_artifacts/runs/fresh_seed42",
+  "archive_config_sha256": "52dd4a3c5e01fd99ba7089316527dc349b6cd94890dedfa98738162ece4f8a71",
+  "old_submission_preserved": true,
+  "packaged_training_verified": false,
+  "entrypoint": "main.py (default: all five trainings, all five generations, both selectors)",
+  "selector_entrypoint": "selection_pipeline.py",
+  "line_endings": "Python source and public MolGPT settings normalized to LF; configuration values unchanged; original root files preserved",
+  "entrypoint_boundary_tests": "4 passed; dry-run and export boundaries only; no GPU/model execution"
+}

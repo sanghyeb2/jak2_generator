@@ -1,0 +1,27 @@
+# Public source allowlist. Data, weights and submission SMILES stay local.
+/*
+!/.gitignore
+!/.gitattributes
+!/*.py
+!/*.md
+!/run.cmd
+!/requirements.txt
+!/setup.ps1
+!/code_provenance.json
+!/generators/
+/generators/*
+!/generators/*.py
+!/generators/data/
+/generators/data/*
+!/generators/data/molgpt_settings.json
+!/docs/
+/docs/*
+!/docs/*.md
+!/docs/*.json
+!/results/
+/results/*
+!/results/summary.json
+!/results/assets_manifest.json
+!/inputs/
+/inputs/*
+!/inputs/README.md

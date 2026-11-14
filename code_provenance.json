@@ -1,0 +1,43 @@
+{
+  "method": "Numerical function/class bodies copied from project code; unused generator and old CLI removed",
+  "common_functions": [
+    "_standardize",
+    "standardize_smiles",
+    "make_submission",
+    "weighted_score",
+    "fingerprints",
+    "select_by_transport"
+  ],
+  "selector_symbols": [
+    "_SelectionMass",
+    "selection_mass",
+    "round_selection",
+    "psd_root",
+    "weighted_fcd",
+    "nystrom_diversity",
+    "sinkhorn_cost",
+    "_sinkhorn_kernel",
+    "digest",
+    "atomic_write",
+    "atomic_torch_save",
+    "save_json",
+    "atomic_csv",
+    "feature_dependencies",
+    "_standardize_worker",
+    "canonical_rows",
+    "Evaluator",
+    "ordered_subset",
+    "write_submission",
+    "restore_rng",
+    "train_run",
+    "validate"
+  ],
+  "history_state_files_copied": false,
+  "root_source_sha256": {
+    "common.py": "7abbb9c49833efb1759e20dee4415e0eadc26ef185852d8942cd5280d20a1b53",
+    "selector.py": "baa24817a131dc883d9a538af655aaf4c65c833a8b1658198a4b3bcbb587b959",
+    "selector_baseline.py": "bd49b1ef17c1d6d0166b0916c61961a59b35b28fbf9cf80d3871ae77b99cf7fb"
+  },
+  "numerical_symbol_AST_equal_to_original": true,
+  "validation_CLI_defaults_only": "local input paths; main passes explicit train and baseline"
+}

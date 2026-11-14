@@ -1,0 +1,17 @@
+{
+  "python": "3.11.6 (tags/v3.11.6:8b6ee5b, Oct  2 2023, 14:57:12) [MSC v.1935 64 bit (AMD64)]",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "cuda": "13.0",
+  "rdkit_runtime": "2026.09.1",
+  "packages": {
+    "torch": "2.12.0+cu130",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "fcd-torch": "1.0.7"
+  },
+  "deterministic": true,
+  "tf32": false,
+  "cublas": ":4096:8",
+  "pythonhashseed": "42"
+}

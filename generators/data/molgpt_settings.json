@@ -1,0 +1,15 @@
+{
+  "selected": {
+    "learning_rate": 0.0001,
+    "epoch": 18,
+    "temperature": 1.0
+  },
+  "source": {
+    "model_id": "jonghyunlee1993/MolGPT_long_context_pretrained-by-ZINC15",
+    "revision": "a52c3df13d9d67cf68f1977aca5dd7777cf88935"
+  },
+  "training_seed": 42,
+  "generation_seed": 123,
+  "batch_size": 64,
+  "provenance": "selected.json: lr=0.0001 after_best epoch 18"
+}
