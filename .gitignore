@@ -7,6 +7,10 @@
 !/run.cmd
 !/requirements.txt
 !/setup.ps1
+!/run_all.ps1
+!/report/
+/report/*
+!/report/*.docx
 !/code_provenance.json
 !/generators/
 /generators/*

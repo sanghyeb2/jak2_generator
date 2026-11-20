@@ -8,11 +8,12 @@ HERE = Path(__file__).resolve().parent
 def public_files():
     files = [p for p in HERE.iterdir() if p.is_file() and
              (p.suffix in ('.py', '.md') or p.name in
-              ('.gitignore', '.gitattributes', 'run.cmd', 'requirements.txt', 'setup.ps1', 'code_provenance.json'))]
+              ('.gitignore', '.gitattributes', 'run.cmd', 'requirements.txt', 'setup.ps1', 'run_all.ps1', 'code_provenance.json'))]
     files += list((HERE / 'generators').glob('*.py'))
     files += [HERE / 'generators/data/molgpt_settings.json']
     files += [p for p in (HERE / 'docs').iterdir() if p.suffix in ('.md', '.json')]
     files += [HERE / 'results/summary.json', HERE / 'results/assets_manifest.json', HERE / 'inputs/README.md']
+    files += list((HERE / 'report').glob('*.docx'))
     return sorted(set(files))
 
 

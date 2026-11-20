@@ -1,6 +1,42 @@
 # JAK2 Generator
 
-JAK2 억제 분자 생성 대회용 **5개 생성모델 + 두 단계 학습형 선별기**입니다. 이 저장소는 최종 제출용 코드만 포함합니다. 과거 실험 폴더·후보 CSV·학습 가중치·캐시·대회 데이터는 Git 에 올리지 않습니다.
+## 최종 과제 제출 — 201112 이상협
+
+최종 보고서: [Kaggle competition](report/Kaggle_competition_201112_이상협_최종.docx)
+
+**기본 과정은 6,029개로 다섯 모델을 실제 학습 → 새 학습 가중치로 모델별 10,000개 생성 → Fullprior → Neural → 제출 분자 2,000개 출력입니다.** 학습을 마친 기존 최종 가중치나 과거 후보·선별기 결과를 재사용하지 않습니다. GRU는 무작위 초기화, 나머지는 공개 사전학습 가중치에서 시작하며, Transfer는 외부 503개 선행 학습도 수행합니다.
+
+### 압축 해제 후 명령 하나로 실행
+
+비공개 과제 제출 ZIP에는 보고서·소스·학습 데이터와 비교용 원본 제출 CSV가 들어 있습니다. 원본 CSV는 `original_submission/`에만 보관하며 코드에서 입력으로 읽지 않습니다. 압축을 해제하고 `jak2_generator` 폴더에서 다음 명령을 실행합니다. Windows/Python 3.11/NVIDIA CUDA GPU와 인터넷 연결이 필요합니다.
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\run_all.ps1
+```
+
+이 파일이 `.venv` 생성·고정 라이브러리 설치 → 입력 해시 검사·공개 초기 자산 다운로드 → 사전 검사 → `main.py` 전체 실행을 연결합니다. 초기 환경을 준비한 뒤 핵심 파이프라인은 `main.py` 하나가 담당합니다.
+
+최종 출력은 `runs/final_reproduction_20261120/selection/neural_submission.csv`입니다. `selection/complete.json`의 공식 RDKit 검사 PASS와 `pipeline_complete.json`을 확인합니다. Kaggle 제출과 점수 확인은 직접 수행합니다.
+
+학습을 시작하지 않고 환경·데이터·코드 연결만 확인할 때:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\run_all.ps1 -CheckOnly
+```
+
+새 독립 재현 실행은 다른 이름으로 시작합니다.
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\run_all.ps1 -RunName independent_repeat_02
+```
+
+GitHub에서 복제한 경우에는 별도 전달받은 `private_inputs.zip`을 저장소 최상위에 놓고 같은 명령을 실행합니다. 대회 데이터는 GitHub에 공개하지 않고 비공개 과제 ZIP에만 포함합니다. 입력 CSV가 이미 올바른 위치에 있으면 ZIP을 다시 배치할 필요가 없습니다.
+
+**검증 범위:** 실행 계획·입력 해시·모듈 import·라이브러리 버전·체크포인트 경로를 검사합니다. 전체 재학습과 생성은 이 사전 검사가 아니며, 처음부터 동일 CSV·동등 점수가 나오는지는 전체 실행 완료 후 판단해야 합니다. 원본 점수 60.52285의 재현 성공을 미리 보장하지 않습니다.
+
+---
+
+JAK2 억제 분자 생성 대회용 **5개 생성모델 + 두 단계 학습형 선별기**입니다. 이 저장소는 최종 보고서와 재현 코드를 포함합니다. 과거 실험 폴더·후보 CSV·학습 가중치·캐시·대회 데이터는 Git 에 올리지 않습니다.
 
 **`python main.py`를 실행하면 학습부터 최종 2,000개 제출물 생성까지 순서대로 진행합니다.** 학습·생성 시드와 하이퍼파라미터는 최종 선택된 값으로 고정하며 HPO 를 다시 실행하지 않습니다. 실행 전에 아래 데이터·초기 자산 준비가 필요합니다.
 

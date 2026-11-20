@@ -134,7 +134,7 @@ def train(name,work):
             if max(map(len,tokens))>info['max_sequence_length']:raise ValueError('REINVENT sequence too long')
             r.save_checkpoint(marker,{'full':[vocab.encode(row).astype(int).tolist() for row in tokens]})
             del model
-        r.fit(1e-4,full=True,epochs=13)
+        r.fit(1e-4,full=True,epochs=13,output=output)
     else:
         sys.argv=[str(ROOT/f'{name}.py'),'--mode','train','--output-dir',str(output)]
         runpy.run_path(str(ROOT/f'{name}.py'),run_name='__main__')
